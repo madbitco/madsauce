@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Madsauce Sass Linter Configuration
+# WFP UI Sass Linter Configuration
 #-------------------------------------------------------------------------------
 # Linter Options
 options:
@@ -16,7 +16,7 @@ rules:
   mixins-before-declarations:
     - 1
     -
-      exclude: ['mq']
+      exclude: ['mq', 'mq-custom']
 
   # Line Spacing
   one-declaration-per-line: 1
@@ -33,8 +33,8 @@ rules:
   no-debug: 1
   no-duplicate-properties:
     - 1
-    -
-      exclude: ['display', 'background-color']
+    # -
+      # exclude: ['display', 'background-color']
 
   no-empty-rulesets: 1
   no-extends: 0

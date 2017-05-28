@@ -1,0 +1,49 @@
+{
+  "name": "madsauce",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A library of SCSS components powering madbit.co",
+  "main": "madsauce.scss",
+  "scripts": {
+    "clean": "grunt clean",
+    "build": "grunt build",
+    "dist": "grunt dist",
+    "watch": "grunt watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madbitco/madsauce.git"
+  },
+  "author": "Matthew Morek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madbitco/madsauce/issues"
+  },
+  "homepage": "https://github.com/madbitco/madsauce#readme",
+  "dependencies": {
+    "approvejs": "^3.1.1",
+    "autoprefixer": "^7.1.1",
+    "cssnano": "^3.10.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "modularscale-sass": "^3.0.2",
+    "node-sass": "^4.5.3",
+    "normalize-scss": "^7.0.0",
+    "postcss-discard-duplicates": "^2.1.0",
+    "postcss-scss": "^1.0.0",
+    "typi": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~3.19.0",
+    "eslint-config-semistandard": "^11.0.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-eslint": "~19.0.0",
+    "semistandard": "~11.0.0",
+    "time-grunt": "~1.4.0"
+  }
+}

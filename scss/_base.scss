@@ -1,0 +1,85 @@
+// Basic declarations and overrides
+* { box-sizing: border-box; }
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family;
+  background-repeat: repeat;
+  background-color: $white;
+  color: $brand-charcoal;
+}
+
+h1 {
+  @include typi("h1");
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  @include typi("h2");
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  @include typi("h3");
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  @include typi("h4");
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a:link {
+  color: $brand-primary;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+a:visited {
+  color: desaturate($brand-primary, 10%);
+  text-decoration: none;
+}
+
+a:hover {
+  color: $brand-primary;
+  text-decoration: none;
+  border-bottom-color: $brand-alt;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  list-style-type: square;
+}
+
+figure {
+  figcaption {
+    color: $grey-dark;
+    font-size: 0.875rem;
+    font-style: italic;
+    border-top: 1px solid $grey-lighter;
+    padding-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+blockquote {
+  border-left: 0.25rem solid $brand-primary;
+  padding-left: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
