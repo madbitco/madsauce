@@ -9,6 +9,7 @@
 // Include Normalize before anything else;
 @include normalize;
 
+@import "components/container";
 // Modules
 @import "modules/utility";
 @import "modules/typography";
