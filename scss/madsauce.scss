@@ -5,6 +5,7 @@
 @import "normalize";
 @import "modularscale";
 @import "typi";
+@import "utility";
 
 // Include Normalize before anything else;
 @include normalize;
@@ -13,7 +14,6 @@
 @import "components/container";
 
 // Modules
-@import "modules/utility";
 @import "modules/typography";
 
 // Load defaults
