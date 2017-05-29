@@ -18,3 +18,8 @@
 .container-lg {
   @include container($container-lg, true);
 }
+
+.container-padded {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
