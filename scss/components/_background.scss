@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// Background Options
+// -----------------------------------------------------------------------------
+.bg-transparent { background-color: transparent; }
+
+.bg-dark-0 { background-color: rgba($black, 0); }
+.bg-dark-1 { background-color: rgba($black, 0.1); }
+.bg-dark-2 { background-color: rgba($black, 0.2); }
+.bg-dark-3 { background-color: rgba($black, 0.3); }
+.bg-dark-4 { background-color: rgba($black, 0.4); }
+.bg-dark-5 { background-color: rgba($black, 0.5); }
+.bg-dark-6 { background-color: rgba($black, 0.6); }
+.bg-dark-7 { background-color: rgba($black, 0.7); }
+.bg-dark-8 { background-color: rgba($black, 0.8); }
+.bg-dark-9 { background-color: rgba($black, 0.9); }
+.bg-dark-10, .bg-black { background-color: rgba($black, 1); }
+
+.bg-light-0 { background-color: rgba($white, 0); }
+.bg-light-1 { background-color: rgba($white, 0.1); }
+.bg-light-2 { background-color: rgba($white, 0.2); }
+.bg-light-3 { background-color: rgba($white, 0.3); }
+.bg-light-4 { background-color: rgba($white, 0.4); }
+.bg-light-5 { background-color: rgba($white, 0.5); }
+.bg-light-6 { background-color: rgba($white, 0.6); }
+.bg-light-7 { background-color: rgba($white, 0.7); }
+.bg-light-8 { background-color: rgba($white, 0.8); }
+.bg-light-9 { background-color: rgba($white, 0.9); }
+.bg-light-10, .bg-white { background-color: rgba($white, 1); }
+
+.bg-grey-darkest  { background-color: $grey-darkest; }
+.bg-grey-darker   { background-color: $grey-darker; }
+.bg-grey-dark     { background-color: $grey-dark; }
+.bg-grey-base     { background-color: $grey-base; }
+.bg-grey-light    { background-color: $grey-light; }
+.bg-grey-lighter  { background-color: $grey-lighter; }
+.bg-grey-lightest { background-color: $grey-lightest; }
+
+.bg-primary       { background-color: $brand-primary; }
+.bg-success       { background-color: $brand-success; }
+
+// -----------------------------------------------------------------------------
+// Custom colour definitions
+// -----------------------------------------------------------------------------
+$brand-wfp:           #2a93fc;
+$brand-printdesigns:  #03c5ff;
+$brand-tigervpn:      #f7921e;
+// -----------------------------------------------------------------------------
+.bg-wfp           { background-color: rgba($brand-wfp, 0.75); }
+.bg-pd            { background-color: rgba($brand-printdesigns, 0.75); }
+.bg-tvpn          { background-color: rgba($brand-tigervpn, 0.75); }

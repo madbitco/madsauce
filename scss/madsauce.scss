@@ -10,6 +10,7 @@
 // Include Normalize before anything else;
 @include normalize;
 
+@import "components/background";
 @import "components/measure";
 @import "components/container";
 @import "components/button";
