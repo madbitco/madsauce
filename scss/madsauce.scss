@@ -15,6 +15,7 @@
 @import "components/container";
 @import "components/button";
 @import "components/tile";
+@import "components/menu";
 
 // Modules
 @import "modules/typography";
@@ -22,6 +23,8 @@
 @import "modules/hero";
 @import "modules/splash";
 @import "modules/projects-list";
+@import "modules/header";
+@import "modules/footer";
 
 // Load defaults
 @import "base";

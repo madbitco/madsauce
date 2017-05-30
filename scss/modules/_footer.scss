@@ -1,0 +1,74 @@
+.footer {}
+
+.footer--container {
+  max-width: $lg;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include mq($md) {
+    flex-direction: row;
+  }
+}
+
+.footer--company,
+.footer--contact,
+.footer--social {
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  text-align: center;
+
+  p { margin: 0.125rem 0; }
+
+  @include mq($md) {
+    text-align: left;
+  }
+}
+
+.footer--address {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.footer--social {
+  p {
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+a:link {
+  &.social--link {
+    border-bottom: 0;
+    display: inline-block;
+
+    svg {
+      fill: $brand-rubber;
+      display: block;
+    }
+
+    &.twitter {
+      &:hover {
+        svg {
+          fill: #1da1f2;
+        }
+      }
+    }
+
+    &.github {
+      &:hover {
+        svg {
+          fill: #333;
+        }
+      }
+    }
+  }
+}
