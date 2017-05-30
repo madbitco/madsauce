@@ -8,6 +8,16 @@
     transform 0.275s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     box-shadow 0.275s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
+  @include mq(36.25em) {
+    &:not(:only-child) {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      max-width: calc(50% - 1rem);
+    }
+  }
+
   @include mq($lg) {
     height: 328px;
 
@@ -20,12 +30,7 @@
   }
 
   @include mq($xl) {
-    &:not(:only-child) {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
+
   }
 
   .tile-link {
