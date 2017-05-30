@@ -5,13 +5,22 @@
 @import "normalize";
 @import "modularscale";
 @import "typi";
+@import "utility";
 
 // Include Normalize before anything else;
 @include normalize;
 
+@import "components/measure";
+@import "components/container";
+@import "components/button";
+@import "components/tile";
+
 // Modules
-@import "modules/utility";
 @import "modules/typography";
+@import "modules/section";
+@import "modules/hero";
+@import "modules/splash";
+@import "modules/projects-list";
 
 // Load defaults
 @import "base";

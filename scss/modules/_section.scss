@@ -1,0 +1,13 @@
+.section {
+
+}
+
+.section-caption {
+  display: inline-block;
+  color: $brand-titanium;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  border-bottom: 3px solid $brand-titanium;
+  margin-top: 1rem;
+  padding-bottom: 0.25rem;
+}

@@ -1,0 +1,93 @@
+.tile {
+  overflow: hidden;
+  height: 240px;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: rgba($black, 0.2) 0 1px 4px;
+  transition:
+    transform 0.275s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.275s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @include mq($lg) {
+    height: 328px;
+
+    &:hover {
+      position: relative;
+      transform: translateY(-8px);
+      box-shadow: rgba($black, 0.15) 0 2px 12px;
+      z-index: 10;
+    }
+  }
+
+  @include mq($xl) {
+    &:not(:only-child) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .tile-link {
+    font-weight: normal;
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    border: 0;
+    color: $white;
+    background-color: $brand-charcoal;
+  }
+
+  .tile-link-reversed {
+    color: $brand-charcoal;
+    background-color: $white;
+  }
+
+  .tile-img {
+    object-fit: cover;
+    height: 240px;
+    max-width: 100%;
+
+    @include mq($lg) {
+      height: 328px;
+      // object-position: right;
+    }
+  }
+
+  .tile-info {
+    cursor: pointer;
+    backface-visibility: hidden;
+    box-shadow: inset rgba($white, 0.2) 0 1px 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include mq($lg) {
+      padding: 1.5rem;
+    }
+  }
+
+  .info-taxonomy {
+    font-size: 0.875rem;
+  }
+
+  .info-title {
+    margin: 0.25rem 0;
+  }
+
+  .info-text {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    max-width: 20em;
+  }
+}

@@ -1,0 +1,114 @@
+.hero {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  background-image:
+    // url("../images/bg-pattern.png"),
+    linear-gradient(45deg, $brand-dark, $brand-titanium 100%);
+  background-blend-mode: soft-light;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  @include mq($lg) {
+    height: 75vh;
+    min-height: 35em;
+    padding-top: 1rem;
+  }
+
+  .hero-wrapper {
+    max-width: 35.5rem;
+    width: 100%;
+
+    @include mq($lg) {
+      max-width: $container;
+      padding-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .hero-title {
+    font-size: 1.625rem;
+    font-weight: normal;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    margin: 1.5rem 0;
+    max-width: 36rem;
+
+    @include mq($sm) {
+      font-size: 1.777rem;
+    }
+
+    @include mq($md) {
+      font-size: 2.369rem;
+    }
+
+    @include mq($lg) {
+      font-size: 2.618rem;
+    }
+  }
+
+  .hero-copy {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    max-width: 36rem;
+  }
+
+  .hero-btn {
+    margin: 0.5rem 0;
+  }
+}
+
+// Slim variant
+.hero-slim {
+  min-height: 75vh;
+  height: auto;
+
+  @include mq($md) {
+    min-height: 32em;
+  }
+
+  @include mq($lg) {
+    padding-top: 1rem;
+
+    .hero-wrapper {
+      // max-width: $project-container;
+    }
+  }
+}
+
+// Background variant
+.hero-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-blend-mode: multiply;
+
+  .hero-title {
+    font-weight: bold;
+    margin: 0.25rem 0;
+  }
+
+  .hero-copy {
+    margin: 0.25rem 0;
+  }
+}
+
+.hero-bottom {
+  justify-content: flex-end;
+
+  .hero-wrapper {
+    padding-bottom: 1rem;
+
+    @include mq($xl) {
+      padding-bottom: 2rem;
+    }
+  }
+}

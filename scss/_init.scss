@@ -52,15 +52,3 @@ $breakpoint-sm:         "screen and (min-width: $sm-screen)" !default;
 $breakpoint-md:         "screen and (min-width: $md-screen)" !default;
 $breakpoint-lg:         "screen and (min-width: $lg-screen)" !default;
 $breakpoint-xl:         "screen and (min-width: $xl-screen)" !default;
-
-@mixin mq($viewport) {
-  @media screen and (min-width: $viewport) {
-    @content;
-  }
-}
-
-@mixin mq-custom($mq...) {
-  @media screen and ($mq) {
-    @content;
-  }
-}
