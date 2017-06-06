@@ -1,0 +1,157 @@
+.disable {
+  overflow-y: hidden;
+  max-height: 100%;
+
+  @include mq($lg) {
+    overflow-y: auto;
+    max-height: auto;
+  }
+}
+
+.nav-wrapper {
+  display: inline-flex;
+
+  &.opened {
+    max-height: 100%;
+    overflow-y: hidden;
+
+    .main-nav {
+      transform: translateY(0);
+      position: fixed;
+      pointer-events: auto;
+    }
+  }
+
+  @include mq($lg) {
+    width: 70%;
+
+    .menu {
+      width: 100%;
+    }
+  }
+}
+
+.nav-trigger {
+  position: relative;
+  background-color: transparent;
+  color: $white;
+  cursor: pointer;
+  backface-visibility: hidden;
+  border: 1px solid $white;
+  line-height: 1.250;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0.4rem 0.65rem;
+  margin-right: 1rem;
+  z-index: 10;
+  font-family: $font-family;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  border-radius: 3px;
+  outline: 0;
+  transition:
+    0.4s border-color cubic-bezier(0.2, 1, 0.3, 1),
+    0.4s color cubic-bezier(0.2, 1, 0.3, 1);
+
+  &:hover {
+    color: $brand-primary;
+    border-color: $brand-primary;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $brand-titanium;
+    border-color: $brand-titanium;
+    text-decoration: none;
+  }
+
+  @include mq($lg) {
+    display: none;
+  }
+}
+
+.main-nav {
+  z-index: 3;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform cubic-bezier(0.2, 1, 0.3, 1) 0.4s;
+  box-shadow: inset $brand-primary 0 -4px 0;
+  background-image: linear-gradient(45deg, $brand-charcoal, $brand-titanium 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+
+  @include mq($lg) {
+    position: static;
+    box-shadow: none;
+    background-image: none;
+    transform: translateY(0);
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    pointer-events: auto;
+
+    .menu--item {
+      padding: 0.25rem 0.5rem;
+      display: inline-block;
+    }
+  }
+
+  .menu--wrap {
+    position: relative;
+    overflow: hidden;
+    margin: 0.33rem 0;
+    list-style: none;
+    padding: 0;
+    z-index: 5;
+    width: 100%;
+
+    @include mq($lg) {
+      margin: 0;
+      text-align: right;
+    }
+  }
+
+  .menu--link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $brand-primary;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    text-align: center;
+    border-bottom: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $brand-alt;
+    }
+
+    @include mq($lg) {
+      font-size: 1rem;
+      background-color: transparent;
+      color: $white;
+      padding: 0.5rem 0.25rem;
+      text-align: center;
+      transition:
+        color cubic-bezier(0.2, 1, 0.3, 1) 0.4s,
+        box-shadow cubic-bezier(0.2, 1, 0.3, 1) 0.4s;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        color: $brand-primary;
+        box-shadow: inset 0 -0.125rem 0 $brand-primary;
+      }
+    }
+  }
+}

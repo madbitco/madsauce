@@ -1,9 +1,9 @@
 {
   "name": "madsauce",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "A library of SCSS components powering madbit.co",
-  "main": "madsauce.scss",
+  "main": "scss/madsauce.scss",
   "scripts": {
     "clean": "grunt clean",
     "build": "grunt build",

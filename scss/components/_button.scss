@@ -23,6 +23,11 @@
   color: $white;
   transition: opacity ease 0.3s;
 
+  &:visited {
+    color: inherit;
+    background-color: inherit;
+  }
+
   &:hover {
     opacity: 0.85;
   }
