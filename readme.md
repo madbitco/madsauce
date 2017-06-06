@@ -1,5 +1,5 @@
 # Madsauce
-SCSS component library and a style guide for MADBIT Co.
+An SCSS component library and a style guide for MADBIT Co.
 
 ## How to use
 To hook this to your project, you should install the package and then add the SCSS source to your build process. This can be done via preferred task runner or directly compiled to Sass. All you need to include is this file:

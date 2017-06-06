@@ -1888,4 +1888,16 @@ hr {
   border-top: 2px solid #748699;
   width: 60%;
 }
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
 /*# sourceMappingURL=madsauce.css.map */
