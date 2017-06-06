@@ -16,8 +16,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass');
 
   grunt.config('clean', [
-    'test/css',
-    'test/js'
+    'docs/css',
+    'docs/js'
   ]);
 
   grunt.config('uglify', {
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
     },
     dist: {
       files: {
-        'test/js/bundle.js': [
+        'docs/js/bundle.js': [
           'js/**/*.js',
           'node_modules/approvejs/dist/approve.min.js'
         ]
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         beautify: true
       },
       files: {
-        'test/js/bundle.js': [
+        'docs/js/bundle.js': [
           'js/**/*.js',
           'node_modules/approvejs/dist/approve.min.js'
         ]
@@ -66,10 +66,10 @@ module.exports = function (grunt) {
           require('cssnano')()
         ]
       },
-      src: 'test/css/**/*.css'
+      src: 'docs/css/**/*.css'
     },
     dev: {
-      src: 'test/css/**/*.css'
+      src: 'docs/css/**/*.css'
     }
   });
 
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
       sourceMap: true,
       indentedSyntax: true,
       sassDir: 'scss',
-      cssDir: 'test/css',
+      cssDir: 'docs/css',
       includePaths: [
         'node_modules/normalize-scss/sass',
         'node_modules/modularscale-sass/stylesheets',
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: 'scss/',
         src: ['**/*.scss'],
-        dest: 'test/css/',
+        dest: 'docs/css/',
         ext: '.css'
       }]
     },
@@ -103,7 +103,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: 'scss/',
         src: ['**/*.scss'],
-        dest: 'test/css/',
+        dest: 'docs/css/',
         ext: '.css'
       }]
     }
@@ -133,14 +133,14 @@ module.exports = function (grunt) {
     grunt.config('browserSync', {
       bsFiles: {
         src : [
-          './test/css/*.css',
-          './test/js/*.js',
-          './test/*.html'
+          './docs/css/*.css',
+          './docs/js/*.js',
+          './docs/*.html'
         ]
       },
       options: {
         server: {
-          baseDir: "./test"
+          baseDir: "./docs"
         }
       }
     });
