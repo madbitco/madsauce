@@ -7,6 +7,13 @@
   }
 }
 
+@mixin container-dark {
+  color: lighten($brand-titanium, 30%);
+  background-color: $brand-charcoal;
+  background-image: linear-gradient(45deg, $brand-dark, $brand-titanium 100%);
+  background-blend-mode: overlay;
+}
+
 .container {
   @include container($centered: true);
 }
@@ -22,4 +29,8 @@
 .container-padded {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.container-dark {
+  @include container-dark;
 }

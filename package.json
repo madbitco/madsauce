@@ -1,6 +1,6 @@
 {
   "name": "madsauce",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "description": "A library of SCSS components powering madbit.co",
   "main": "scss/madsauce.scss",
