@@ -26,9 +26,14 @@
   @include container($container-lg, true);
 }
 
-.container-padded {
+.container-padded-h {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.container-padded-v {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .container-dark {

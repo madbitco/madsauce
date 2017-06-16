@@ -49,7 +49,7 @@ p {
   }
 }
 
-p {
+p, ul, ol {
   a:link {
     color: $brand-primary;
     text-decoration: none;
