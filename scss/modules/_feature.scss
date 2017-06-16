@@ -23,9 +23,11 @@
 .feature {
   width: 100%;
   padding: 0;
-  max-width: none;
   display: flex;
   flex-wrap: nowrap;
+  max-width: $xl;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-container {
@@ -100,4 +102,60 @@
 .feature-content-title {
   font-size: 1.5rem;
   margin: 0.5rem 0;
+}
+
+.feature-reverse {
+  flex-direction: column-reverse;
+
+  @include mq($md) {
+    flex-direction: row;
+  }
+}
+
+.feature-photo,
+.feature-icon {
+  background-color: transparent;
+}
+
+.feature-icon {
+  min-height: 6em;
+  position: relative;
+  z-index: 2;
+
+  & + .feature-container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  @include mq($lg) {
+    max-width: 30%;
+
+    & + .feature-container {
+      max-width: 60%;
+    }
+  }
+}
+
+.feature-count {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: $white;
+  text-shadow: rgba($black, 0.3) 0 1px 2px;
+  background-image: url("../images/hexagon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  span {
+    margin: -0.25rem 0 0;
+  }
 }
