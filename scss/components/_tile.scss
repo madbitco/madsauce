@@ -1,9 +1,11 @@
 .tile {
   overflow: hidden;
-  height: 240px;
   width: 100%;
   max-width: 100%;
   box-shadow: rgba($black, 0.2) 0 1px 4px;
+  flex-basis: 48%;
+  height: 240px;
+  min-height: none;
   transition:
     transform 0.275s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     box-shadow 0.275s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -28,10 +30,6 @@
       box-shadow: rgba($black, 0.15) 0 2px 12px;
       z-index: 10;
     }
-  }
-
-  @include mq($xl) {
-
   }
 
   .tile-link {
@@ -80,6 +78,85 @@
 
     @include mq($lg) {
       padding: 1.5rem;
+    }
+  }
+
+  .tile-info-big {
+    cursor: pointer;
+    backface-visibility: hidden;
+    box-shadow: inset rgba($white, 0.2) 0 1px 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 90%;
+
+    .info-text,
+    .info-link {
+      font-size: 1rem;
+      max-width: 24em;
+
+      span {
+        display: inline-block;
+        border-bottom: 1px solid;
+      }
+    }
+
+    .info-link {
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+
+      @include mq($lg) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .info-link-cta {
+      margin: 0;
+
+      @include mq($lg) {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .info-title {
+      max-width: 24rem;
+      line-height: 1.2;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+
+      @include mq($lg) {
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    @include mq($lg) {
+      padding: 2rem;
+      max-width: none;
+    }
+  }
+
+  &.tile-featured {
+    max-width: none;
+    flex-basis: auto;
+
+    @include mq($lg) {
+      height: 400px;
+    }
+
+    .tile-link {
+      .tile-img {
+        align-self: flex-end;
+        @include mq($lg) {
+          height: 400px;
+        }
+      }
     }
   }
 
