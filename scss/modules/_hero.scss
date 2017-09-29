@@ -3,7 +3,8 @@
   padding-right: 1.5rem;
   padding-top: 4rem;
   padding-bottom: 1rem;
-  background-image: linear-gradient(45deg, $brand-dark, $brand-titanium 100%);
+  background-image:
+    linear-gradient(45deg, $brand-dark, $brand-titanium 100%);
   color: $white;
   height: 100vh;
   display: flex;
@@ -31,7 +32,7 @@
 
   .hero-title {
     font-size: 1.625rem;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: -0.025em;
     line-height: 1.2;
     margin: 1.5rem 0;
@@ -66,6 +67,65 @@
 .hero-slim {
   min-height: 75vh;
   height: auto;
+
+  @include mq($md) {
+    min-height: 32em;
+  }
+
+  @include mq($lg) {
+    padding-top: 1rem;
+
+    .hero-wrapper {
+      // max-width: $project-container;
+    }
+  }
+}
+
+// Background variant
+.hero-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-blend-mode: multiply;
+
+  .hero-title {
+    font-weight: bold;
+    margin: 0.25rem 0;
+  }
+
+  .hero-copy {
+    margin: 0.25rem 0;
+  }
+}
+
+.hero-bg-pattern {
+  background-image:
+    url("../images/bg-pattern.png"),
+    linear-gradient(45deg, $brand-dark, $brand-titanium 100%);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-repeat: repeat, repeat;
+  background-position: 0, 0;
+
+  @include mq($lg) {
+    background-size: contain;
+  }
+}
+
+.hero-bottom {
+  justify-content: flex-end;
+
+  .hero-wrapper {
+    padding-bottom: 1rem;
+
+    @include mq($xl) {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.hero-slim {
   padding-left: 0;
   padding-right: 0;
 
@@ -74,7 +134,53 @@
   }
 
   @include mq($lg) {
-    padding-top: 1rem;
+    min-height: 32em;
+  }
+
+  .hero-wrapper {
+    max-width: $container;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @include mq($lg) {
+      max-width: $container;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  .hero-wrapper-center {
+    max-width: 36em;
+
+    @include mq($md) {
+      text-align: center;
+    }
+  }
+}
+
+// TODO: Port to Madsauce
+.hero-very-slim {
+  height: auto;
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 12em;
+
+  @include mq($md) {
+    min-height: 16em;
+  }
+
+  @include mq($lg) {
+    min-height: 20em;
+  }
+
+  .hero-title {
+    margin-top: 0.5rem;
+
+    @include mq($lg) {
+      margin-top: 1rem;
+    }
   }
 
   .hero-wrapper {
@@ -107,44 +213,4 @@
   color: lighten($brand-titanium, 10%);
   padding-bottom: 0.25rem;
   border-bottom: 2px solid $brand-warning;
-}
-
-// Background variant
-.hero-bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  background-blend-mode: multiply;
-
-  .hero-title {
-    font-weight: bold;
-    margin: 0.25rem 0;
-  }
-
-  .hero-copy {
-    margin: 0.25rem 0;
-  }
-}
-
-.hero-bg-pattern {
-  background-image:
-    url("../images/bg-pattern.png"),
-    linear-gradient(45deg, $brand-dark, $brand-titanium 100%);
-  background-blend-mode: soft-light;
-  background-size: 100%, 100%;
-  background-repeat: repeat, repeat;
-  background-position: 0, 0;
-}
-
-.hero-bottom {
-  justify-content: flex-end;
-
-  .hero-wrapper {
-    padding-bottom: 1rem;
-
-    @include mq($xl) {
-      padding-bottom: 2rem;
-    }
-  }
 }
