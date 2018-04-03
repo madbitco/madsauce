@@ -29,6 +29,13 @@
   p { margin: 0.125rem 0; }
 
   @include mq($md) {
+    width: 100%;
+    max-width: 33.333%;
+  }
+}
+
+.footer--company {
+  @include mq($md) {
     text-align: left;
   }
 }
@@ -42,6 +49,10 @@
   p {
     margin: 0;
     line-height: 1;
+  }
+
+  @include mq($md) {
+    text-align: right;
   }
 }
 

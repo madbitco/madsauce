@@ -5,7 +5,7 @@ $font-size:             1rem;
 $font-size-sm:          0.875rem;
 $font-normal:           400;
 $font-bold:             800;
-$font-family:           "soleil", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family:           "soleil", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 $white:                 #ffffff;
 $black:                 #000000;
@@ -37,16 +37,16 @@ $text-color:            $brand-rubber;
 $link-color:            $brand-alt;
 $link-hover-color:      darken($link-color, 15%);
 
-$spacing-unit:          0.5rem;
+$spacing-unit:          0.5rem !default;
 
-$sm:                    32em;
-$md:                    48em;
-$lg:                    64em;
-$xl:                    72em;
+$sm:                    32em !default;
+$md:                    48em !default;
+$lg:                    64em !default;
+$xl:                    72em !default;
 
-$container:             52em;
-$container-md:          60em;
-$container-lg:          74em;
+$container:             52em !default;
+$container-md:          60em !default;
+$container-lg:          74em !default;
 
 $breakpoint-sm:         "screen and (min-width: $sm-screen)" !default;
 $breakpoint-md:         "screen and (min-width: $md-screen)" !default;

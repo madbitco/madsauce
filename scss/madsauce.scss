@@ -1,14 +1,11 @@
 // -----------------------------------------------------------------------------
 // MADSAUCE v0.1.0
 // -----------------------------------------------------------------------------
-@import "init";
-@import "normalize";
+@import "normalize/import-now";
 @import "modularscale";
 @import "typi";
+@import "init";
 @import "utility";
-
-// Include Normalize before anything else;
-@include normalize;
 
 @import "components/background";
 @import "components/measure";
